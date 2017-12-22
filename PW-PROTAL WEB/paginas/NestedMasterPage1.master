@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Mast_pages1.Master" AutoEventWireup="true" CodeBehind="NestedMasterPage1.master.cs" Inherits="PW_PROTAL_WEB.NestedMasterPage2" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+ 
+    <table  style="width: 100%;">
+        <tr>
+            <td colspan="3">
+                <div id="submenu">
+                    <ul>
+                        <li><a>Formula</a></li>
+                        <li><a>Productos</a></li>
+                        <li><a>Detalle del Aro</a></li>
+                        <li><a>Boleta</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>

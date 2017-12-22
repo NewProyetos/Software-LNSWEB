@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://190.86.177.170/LesaServices/Lservices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://190.86.177.170/LesaServices/Lservices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://190.86.177.170/LesaServices/Lservices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LServices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Lservices_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_LOGIN_PW_InputMessage">
+    <wsdl:part name="parameters" element="tns:LOGIN_PW" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_LOGIN_PW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LOGIN_PWResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_MostrarPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostrarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_MostrarPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostrarPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_laboratorio_InputMessage">
+    <wsdl:part name="parameters" element="tns:laboratorio" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_laboratorio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:laboratorioResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_nombre_clientes__InputMessage">
+    <wsdl:part name="parameters" element="tns:nombre_clientes_" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_nombre_clientes__OutputMessage">
+    <wsdl:part name="parameters" element="tns:nombre_clientes_Response" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Datos_cliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Datos_cliente" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Datos_cliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Datos_clienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_combo_aros_InputMessage">
+    <wsdl:part name="parameters" element="tns:combo_aros" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_combo_aros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:combo_arosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_marca_aro_InputMessage">
+    <wsdl:part name="parameters" element="tns:marca_aro" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_marca_aro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:marca_aroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_descripcion_aro_InputMessage">
+    <wsdl:part name="parameters" element="tns:descripcion_aro" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_descripcion_aro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:descripcion_aroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_busq_tratamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:busq_tratamiento" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_busq_tratamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:busq_tratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Familia_lentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Familia_lentes" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Familia_lentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Familia_lentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Grupo_lentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Grupo_lentes" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Grupo_lentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Grupo_lentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Diseño_entes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Diseño_entes" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Diseño_entes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Diseño_entesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Material_lente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Material_lente" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Material_lente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Material_lenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_color_lente_InputMessage">
+    <wsdl:part name="parameters" element="tns:color_lente" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_color_lente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:color_lenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_lentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_lentes" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_lentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_lentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Precio_productos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Precio_productos" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Precio_productos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Precio_productosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Listado_servicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listado_servicios" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Listado_servicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listado_serviciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_servicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_servicios" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_servicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_serviciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Listado_aros_InputMessage">
+    <wsdl:part name="parameters" element="tns:Listado_aros" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_Listado_aros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Listado_arosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_aro_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_aro" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_confirmar_aro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmar_aroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_ingresando_encabezado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ingresando_encabezado" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_ingresando_encabezado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ingresando_encabezadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_insertando_articulos_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertando_articulos" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_insertando_articulos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertando_articulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_insertando_complemento_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertando_complemento" />
+  </wsdl:message>
+  <wsdl:message name="Lservices_insertando_complemento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertando_complementoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Lservices">
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/login" message="tns:Lservices_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/loginResponse" message="tns:Lservices_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LOGIN_PW">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/LOGIN_PW" message="tns:Lservices_LOGIN_PW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/LOGIN_PWResponse" message="tns:Lservices_LOGIN_PW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/MostrarPedidos" message="tns:Lservices_MostrarPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/MostrarPedidosResponse" message="tns:Lservices_MostrarPedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="laboratorio">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/laboratorio" message="tns:Lservices_laboratorio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/laboratorioResponse" message="tns:Lservices_laboratorio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nombre_clientes_">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/nombre_clientes_" message="tns:Lservices_nombre_clientes__InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/nombre_clientes_Response" message="tns:Lservices_nombre_clientes__OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Datos_cliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Datos_cliente" message="tns:Lservices_Datos_cliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Datos_clienteResponse" message="tns:Lservices_Datos_cliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="combo_aros">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/combo_aros" message="tns:Lservices_combo_aros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/combo_arosResponse" message="tns:Lservices_combo_aros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="marca_aro">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/marca_aro" message="tns:Lservices_marca_aro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/marca_aroResponse" message="tns:Lservices_marca_aro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="descripcion_aro">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/descripcion_aro" message="tns:Lservices_descripcion_aro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/descripcion_aroResponse" message="tns:Lservices_descripcion_aro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="busq_tratamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/busq_tratamiento" message="tns:Lservices_busq_tratamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/busq_tratamientoResponse" message="tns:Lservices_busq_tratamiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Familia_lentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Familia_lentes" message="tns:Lservices_Familia_lentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Familia_lentesResponse" message="tns:Lservices_Familia_lentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Grupo_lentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Grupo_lentes" message="tns:Lservices_Grupo_lentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Grupo_lentesResponse" message="tns:Lservices_Grupo_lentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Diseño_entes">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Diseño_entes" message="tns:Lservices_Diseño_entes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Diseño_entesResponse" message="tns:Lservices_Diseño_entes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Material_lente">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Material_lente" message="tns:Lservices_Material_lente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Material_lenteResponse" message="tns:Lservices_Material_lente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="color_lente">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/color_lente" message="tns:Lservices_color_lente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/color_lenteResponse" message="tns:Lservices_color_lente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_lentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/confirmar_lentes" message="tns:Lservices_confirmar_lentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/confirmar_lentesResponse" message="tns:Lservices_confirmar_lentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Precio_productos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Precio_productos" message="tns:Lservices_Precio_productos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Precio_productosResponse" message="tns:Lservices_Precio_productos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listado_servicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Listado_servicios" message="tns:Lservices_Listado_servicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Listado_serviciosResponse" message="tns:Lservices_Listado_servicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_servicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/confirmar_servicios" message="tns:Lservices_confirmar_servicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/confirmar_serviciosResponse" message="tns:Lservices_confirmar_servicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Listado_aros">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/Listado_aros" message="tns:Lservices_Listado_aros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/Listado_arosResponse" message="tns:Lservices_Listado_aros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_aro">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/confirmar_aro" message="tns:Lservices_confirmar_aro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/confirmar_aroResponse" message="tns:Lservices_confirmar_aro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ingresando_encabezado">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/ingresando_encabezado" message="tns:Lservices_ingresando_encabezado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/ingresando_encabezadoResponse" message="tns:Lservices_ingresando_encabezado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertando_articulos">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/insertando_articulos" message="tns:Lservices_insertando_articulos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/insertando_articulosResponse" message="tns:Lservices_insertando_articulos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertando_complemento">
+      <wsdl:input wsaw:Action="http://tempuri.org/Lservices/insertando_complemento" message="tns:Lservices_insertando_complemento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Lservices/insertando_complementoResponse" message="tns:Lservices_insertando_complemento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Lservices" type="tns:Lservices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/Lservices/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LOGIN_PW">
+      <soap:operation soapAction="http://tempuri.org/Lservices/LOGIN_PW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarPedidos">
+      <soap:operation soapAction="http://tempuri.org/Lservices/MostrarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="laboratorio">
+      <soap:operation soapAction="http://tempuri.org/Lservices/laboratorio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nombre_clientes_">
+      <soap:operation soapAction="http://tempuri.org/Lservices/nombre_clientes_" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Datos_cliente">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Datos_cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="combo_aros">
+      <soap:operation soapAction="http://tempuri.org/Lservices/combo_aros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="marca_aro">
+      <soap:operation soapAction="http://tempuri.org/Lservices/marca_aro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descripcion_aro">
+      <soap:operation soapAction="http://tempuri.org/Lservices/descripcion_aro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="busq_tratamiento">
+      <soap:operation soapAction="http://tempuri.org/Lservices/busq_tratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Familia_lentes">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Familia_lentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Grupo_lentes">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Grupo_lentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Diseño_entes">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Diseño_entes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Material_lente">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Material_lente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="color_lente">
+      <soap:operation soapAction="http://tempuri.org/Lservices/color_lente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_lentes">
+      <soap:operation soapAction="http://tempuri.org/Lservices/confirmar_lentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Precio_productos">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Precio_productos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listado_servicios">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Listado_servicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_servicios">
+      <soap:operation soapAction="http://tempuri.org/Lservices/confirmar_servicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listado_aros">
+      <soap:operation soapAction="http://tempuri.org/Lservices/Listado_aros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmar_aro">
+      <soap:operation soapAction="http://tempuri.org/Lservices/confirmar_aro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ingresando_encabezado">
+      <soap:operation soapAction="http://tempuri.org/Lservices/ingresando_encabezado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertando_articulos">
+      <soap:operation soapAction="http://tempuri.org/Lservices/insertando_articulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertando_complemento">
+      <soap:operation soapAction="http://tempuri.org/Lservices/insertando_complemento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_Lservices" binding="tns:BasicHttpBinding_Lservices">
+      <soap:address location="http://190.86.177.170/LesaServices/Lservices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

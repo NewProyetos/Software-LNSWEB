@@ -1,0 +1,15 @@
+C:\Users\navarrow\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.dll
+C:\Users\navarrow\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.pdb
+C:\Users\navarrow\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.csprojResolveAssemblyReference.cache
+C:\Users\navarrow\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.dll
+C:\Users\navarrow\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.pdb
+C:\Users\villegasm\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.dll
+C:\Users\villegasm\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.pdb
+C:\Users\villegasm\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.csprojResolveAssemblyReference.cache
+C:\Users\villegasm\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.dll
+C:\Users\villegasm\Desktop\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.pdb
+C:\Users\navarrow\Desktop\PW-PROTAL WEB_V2\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.dll
+C:\Users\navarrow\Desktop\PW-PROTAL WEB_V2\PW-PROTAL WEB\PW-PROTAL WEB\bin\PW-PROTAL WEB.pdb
+C:\Users\navarrow\Desktop\PW-PROTAL WEB_V2\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.csprojResolveAssemblyReference.cache
+C:\Users\navarrow\Desktop\PW-PROTAL WEB_V2\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.dll
+C:\Users\navarrow\Desktop\PW-PROTAL WEB_V2\PW-PROTAL WEB\PW-PROTAL WEB\obj\Debug\PW-PROTAL WEB.pdb

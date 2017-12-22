@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cod_cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_vend" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contraseña" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Laboratory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="login" nillable="true" type="tns:login" />
+  <xs:complexType name="ArrayOflogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="login" nillable="true" type="tns:login" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflogin" nillable="true" type="tns:ArrayOflogin" />
+  <xs:complexType name="login_PW">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agrupacion_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contras_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Esquemas_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Regreso_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="login_PW" nillable="true" type="tns:login_PW" />
+  <xs:complexType name="ArrayOflogin_PW">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="login_PW" nillable="true" type="tns:login_PW" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflogin_PW" nillable="true" type="tns:ArrayOflogin_PW" />
+  <xs:complexType name="listado_pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Caja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_orden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Esquema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pacienete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tiempo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listado_pedido" nillable="true" type="tns:listado_pedido" />
+  <xs:complexType name="ArrayOflistado_pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listado_pedido" nillable="true" type="tns:listado_pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistado_pedido" nillable="true" type="tns:ArrayOflistado_pedido" />
+  <xs:complexType name="laboratorio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pais" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="laboratorio" nillable="true" type="tns:laboratorio" />
+  <xs:complexType name="ArrayOflaboratorio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="laboratorio" nillable="true" type="tns:laboratorio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflaboratorio" nillable="true" type="tns:ArrayOflaboratorio" />
+  <xs:complexType name="nombre_clie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="nombre_clie" nillable="true" type="tns:nombre_clie" />
+  <xs:complexType name="datos_cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo_cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Esquema" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre_cliente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="datos_cliente" nillable="true" type="tns:datos_cliente" />
+  <xs:complexType name="ArrayOfdatos_cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="datos_cliente" nillable="true" type="tns:datos_cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdatos_cliente" nillable="true" type="tns:ArrayOfdatos_cliente" />
+  <xs:complexType name="combo_aro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color_a" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca_a" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material_a" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modelo_a" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="combo_aro" nillable="true" type="tns:combo_aro" />
+  <xs:complexType name="ArrayOfcombo_aro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="combo_aro" nillable="true" type="tns:combo_aro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcombo_aro" nillable="true" type="tns:ArrayOfcombo_aro" />
+  <xs:complexType name="combo_marca_aro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Marccar_a_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="combo_marca_aro" nillable="true" type="tns:combo_marca_aro" />
+  <xs:complexType name="ArrayOfcombo_marca_aro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="combo_marca_aro" nillable="true" type="tns:combo_marca_aro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcombo_marca_aro" nillable="true" type="tns:ArrayOfcombo_marca_aro" />
+  <xs:complexType name="descripcion_aro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descrip_aro_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modelo_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="descripcion_aro" nillable="true" type="tns:descripcion_aro" />
+  <xs:complexType name="busqueda_tratamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cod_trata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desc_trata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio_tratamiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tratamiento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="busqueda_tratamiento" nillable="true" type="tns:busqueda_tratamiento" />
+  <xs:complexType name="ArrayOfbusqueda_tratamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="busqueda_tratamiento" nillable="true" type="tns:busqueda_tratamiento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfbusqueda_tratamiento" nillable="true" type="tns:ArrayOfbusqueda_tratamiento" />
+  <xs:complexType name="familia_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Articulo_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="familia_lentes" nillable="true" type="tns:familia_lentes" />
+  <xs:complexType name="ArrayOffamilia_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="familia_lentes" nillable="true" type="tns:familia_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOffamilia_lentes" nillable="true" type="tns:ArrayOffamilia_lentes" />
+  <xs:complexType name="grupos_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Familia_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupos_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="grupos_lentes" nillable="true" type="tns:grupos_lentes" />
+  <xs:complexType name="ArrayOfgrupos_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="grupos_lentes" nillable="true" type="tns:grupos_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfgrupos_lentes" nillable="true" type="tns:ArrayOfgrupos_lentes" />
+  <xs:complexType name="diseños_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Diseño_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familia_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupos_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="diseños_lentes" nillable="true" type="tns:diseños_lentes" />
+  <xs:complexType name="ArrayOfdiseños_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="diseños_lentes" nillable="true" type="tns:diseños_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdiseños_lentes" nillable="true" type="tns:ArrayOfdiseños_lentes" />
+  <xs:complexType name="materiales_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Diseño_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familia_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupos_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="materiales_lentes" nillable="true" type="tns:materiales_lentes" />
+  <xs:complexType name="ArrayOfmateriales_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="materiales_lentes" nillable="true" type="tns:materiales_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmateriales_lentes" nillable="true" type="tns:ArrayOfmateriales_lentes" />
+  <xs:complexType name="color_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deseños_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familia_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupos_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Materiales_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="color_lentes" nillable="true" type="tns:color_lentes" />
+  <xs:complexType name="ArrayOfcolor_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="color_lentes" nillable="true" type="tns:color_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcolor_lentes" nillable="true" type="tns:ArrayOfcolor_lentes" />
+  <xs:complexType name="confir_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo_lente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_lente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diseño_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familia_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Grupos_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="confir_lentes" nillable="true" type="tns:confir_lentes" />
+  <xs:complexType name="ArrayOfconfir_lentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="confir_lentes" nillable="true" type="tns:confir_lentes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfconfir_lentes" nillable="true" type="tns:ArrayOfconfir_lentes" />
+  <xs:complexType name="precio_producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cod_articulo_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cod_listado_precios_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="precio_producto" nillable="true" type="tns:precio_producto" />
+  <xs:complexType name="ArrayOfprecio_producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="precio_producto" nillable="true" type="tns:precio_producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfprecio_producto" nillable="true" type="tns:ArrayOfprecio_producto" />
+  <xs:complexType name="listado_servicios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Servicios_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listado_servicios" nillable="true" type="tns:listado_servicios" />
+  <xs:complexType name="ArrayOflistado_servicios">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listado_servicios" nillable="true" type="tns:listado_servicios" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistado_servicios" nillable="true" type="tns:ArrayOflistado_servicios" />
+  <xs:complexType name="confir_servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo_servicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_servicio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="confir_servicio" nillable="true" type="tns:confir_servicio" />
+  <xs:complexType name="ArrayOfconfir_servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="confir_servicio" nillable="true" type="tns:confir_servicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfconfir_servicio" nillable="true" type="tns:ArrayOfconfir_servicio" />
+  <xs:complexType name="listado_Aros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aros_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="listado_Aros" nillable="true" type="tns:listado_Aros" />
+  <xs:complexType name="ArrayOflistado_Aros">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listado_Aros" nillable="true" type="tns:listado_Aros" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflistado_Aros" nillable="true" type="tns:ArrayOflistado_Aros" />
+  <xs:complexType name="confir_aros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo_aro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_aro" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="confir_aros" nillable="true" type="tns:confir_aros" />
+  <xs:complexType name="ArrayOfconfir_aros">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="confir_aros" nillable="true" type="tns:confir_aros" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfconfir_aros" nillable="true" type="tns:ArrayOfconfir_aros" />
+  <xs:complexType name="insert_encabezado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paciente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="insert_encabezado" nillable="true" type="tns:insert_encabezado" />
+  <xs:complexType name="insert_articulos_">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Num_par" type="xs:int" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="insert_articulos_" nillable="true" type="tns:insert_articulos_" />
+  <xs:complexType name="insert_complementos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color_aro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Corredor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diagonal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dnp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Framefit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Horizontal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca_aro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material_aro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Montaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero_caja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odadd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odcil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odeje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odesf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Odpris" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oiadd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oicil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oieje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oiesf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Oipris" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pano" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pantosco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Proceso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Puente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipoaro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vertical" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vertice" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="insert_complementos" nillable="true" type="tns:insert_complementos" />
+</xs:schema>

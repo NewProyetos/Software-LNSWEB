@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://190.86.177.170/LesaServices/Lservices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LServices" />
+  <xs:element name="login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="log" nillable="true" type="q1:login" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="loginResult" nillable="true" type="q2:ArrayOflogin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LOGIN_PW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="log" nillable="true" type="q3:login_PW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LOGIN_PWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="LOGIN_PWResult" nillable="true" type="q4:ArrayOflogin_PW" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MostrarPedidos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="cliente" nillable="true" type="q5:listado_pedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MostrarPedidosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="MostrarPedidosResult" nillable="true" type="q6:ArrayOflistado_pedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="laboratorio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="lab_" nillable="true" type="q7:laboratorio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="laboratorioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="laboratorioResult" nillable="true" type="q8:ArrayOflaboratorio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre_clientes_">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="cli" nillable="true" type="q9:nombre_clie" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre_clientes_Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre_clientes_Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Datos_cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="clie" nillable="true" type="q10:datos_cliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Datos_clienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Datos_clienteResult" nillable="true" type="q11:ArrayOfdatos_cliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="combo_aros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="cbm_aro" nillable="true" type="q12:combo_aro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="combo_arosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="combo_arosResult" nillable="true" type="q13:ArrayOfcombo_aro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="marca_aro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="cmb_m_aro" nillable="true" type="q14:combo_marca_aro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="marca_aroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="marca_aroResult" nillable="true" type="q15:ArrayOfcombo_marca_aro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="descripcion_aro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="dscaro" nillable="true" type="q16:descripcion_aro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="descripcion_aroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="descripcion_aroResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="busq_tratamiento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="bsc_trata" nillable="true" type="q17:busqueda_tratamiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="busq_tratamientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="busq_tratamientoResult" nillable="true" type="q18:ArrayOfbusqueda_tratamiento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Familia_lentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="list_lentes" nillable="true" type="q19:familia_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Familia_lentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Familia_lentesResult" nillable="true" type="q20:ArrayOffamilia_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Grupo_lentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="grupo" nillable="true" type="q21:grupos_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Grupo_lentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Grupo_lentesResult" nillable="true" type="q22:ArrayOfgrupos_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Diseño_entes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="dise" nillable="true" type="q23:diseños_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Diseño_entesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Diseño_entesResult" nillable="true" type="q24:ArrayOfdiseños_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Material_lente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="mate" nillable="true" type="q25:materiales_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Material_lenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Material_lenteResult" nillable="true" type="q26:ArrayOfmateriales_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="color_lente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="color" nillable="true" type="q27:color_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="color_lenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="color_lenteResult" nillable="true" type="q28:ArrayOfcolor_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_lentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="desc_" nillable="true" type="q29:confir_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_lentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="confirmar_lentesResult" nillable="true" type="q30:ArrayOfconfir_lentes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Precio_productos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="pre" nillable="true" type="q31:precio_producto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Precio_productosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Precio_productosResult" nillable="true" type="q32:ArrayOfprecio_producto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listado_servicios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="list_serv" nillable="true" type="q33:listado_servicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listado_serviciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Listado_serviciosResult" nillable="true" type="q34:ArrayOflistado_servicios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_servicios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="desc_" nillable="true" type="q35:confir_servicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_serviciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="confirmar_serviciosResult" nillable="true" type="q36:ArrayOfconfir_servicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listado_aros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="list_aros" nillable="true" type="q37:listado_Aros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Listado_arosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="Listado_arosResult" nillable="true" type="q38:ArrayOflistado_Aros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_aro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="desc_" nillable="true" type="q39:confir_aros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmar_aroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="confirmar_aroResult" nillable="true" type="q40:ArrayOfconfir_aros" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresando_encabezado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="enc" nillable="true" type="q41:insert_encabezado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ingresando_encabezadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ingresando_encabezadoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertando_articulos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="det" nillable="true" type="q42:insert_articulos_" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertando_articulosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertando_articulosResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertando_complemento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/LServices" minOccurs="0" name="enc" nillable="true" type="q43:insert_complementos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertando_complementoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertando_complementoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

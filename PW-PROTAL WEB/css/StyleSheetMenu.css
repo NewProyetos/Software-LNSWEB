@@ -1,0 +1,843 @@
+﻿/*MV: Vista del menú desktop y mobile*/
+body {
+    font-family: 'Proxima Nova','Century Gothic', Arial, Helvetica, sans-serif;
+    /*font-family: 'Helvetica Neue', sans-serif;*/
+    font-weight: 400;
+    padding-top: 160px;
+    z-index: 1;
+}
+
+* {
+    ;
+    -sizing: border-box;
+}
+
+#menu {
+    background-color: white;
+    z-index: 999;
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+
+nav {
+    padding: 30px;
+}
+
+    nav ul {
+        float: right;
+    }
+
+        nav ul li {
+            display: inline-block;
+            float: left;
+        }
+
+            nav ul li:not(:first-child) {
+                margin-left: 25px;
+            }
+
+            nav ul li a {
+                display: inline-block;
+                outline: none;
+                color: #1f2227;
+                font-size: 16px;
+                text-decoration: none;
+                letter-spacing: 0.04em;
+            }
+
+                nav ul li a:hover {
+                    color: #808080;
+                    text-decoration: none;
+                }
+
+        nav ul .contact {
+            display: inline-block;
+            float: right;
+        }
+
+            nav ul .contact a {
+                display: inline-block;
+                outline: none;
+                color: #1f2227;
+                font-size: 11px;
+                text-decoration: none;
+                letter-spacing: 0.04em;
+            }
+
+                nav ul .contact a:hover {
+                    color: #808080;
+                    text-decoration: none;
+                }
+
+#imgLogoWhite {
+    display: none;
+}
+
+@media screen and (max-device-width: 560px) {
+
+    #imgLogoWhite {
+        display: block !important;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -9999;
+        background: #615F61;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+
+        .nav-container ul {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+            .nav-container ul li {
+                display: block;
+                float: none;
+                width: 100%;
+                text-align: right;
+                margin-bottom: 10px;
+            }
+
+                .nav-container ul li:nth-child(1) a {
+                    transition-delay: 0.2s;
+                }
+
+                .nav-container ul li:nth-child(2) a {
+                    transition-delay: 0.3s;
+                }
+
+                .nav-container ul li:nth-child(3) a {
+                    transition-delay: 0.4s;
+                }
+
+                .nav-container ul li:nth-child(4) a {
+                    transition-delay: 0.5s;
+                }
+
+                .nav-container ul li:not(:first-child) {
+                    margin-left: 0;
+                }
+
+                .nav-container ul li a {
+                    padding: 10px 55px;
+                    opacity: 0;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 600;
+                    transform: translateY(-20px);
+                    transition: all 0.2s ease;
+                }
+
+            .nav-container ul .contact a {
+                padding: 10px 55px;
+                opacity: 0;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                transform: translateY(-20px);
+                transition: all 0.2s ease;
+            }
+
+    .nav-open {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+
+        .nav-open i {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #1f2227;
+            border-radius: 2px;
+            margin-left: 14px;
+        }
+
+            .nav-open i:nth-child(1) {
+                margin-top: 16px;
+            }
+
+            .nav-open i:nth-child(2) {
+                margin-top: 4px;
+                opacity: 1;
+            }
+
+            .nav-open i:nth-child(3) {
+                margin-top: 4px;
+            }
+}
+
+#nav:checked + .nav-open {
+    transform: rotate(45deg);
+}
+
+    #nav:checked + .nav-open i {
+        background: #fff;
+        transition: transform 0.2s ease;
+    }
+
+        #nav:checked + .nav-open i:nth-child(1) {
+            transform: translateY(6px) rotate(180deg);
+        }
+
+        #nav:checked + .nav-open i:nth-child(2) {
+            opacity: 0;
+        }
+
+        #nav:checked + .nav-open i:nth-child(3) {
+            transform: translateY(-6px) rotate(90deg);
+        }
+
+#nav:checked ~ .nav-container {
+    z-index: 9990;
+    opacity: 1;
+    display: block;
+}
+
+    #nav:checked ~ .nav-container ul li a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.hidden {
+    display: none;
+}
+
+/*MV: Vista principal de elementos y vista movil*/
+#imgLogo {
+    float: left;
+}
+
+.content {
+    background-color: #fff;
+}
+
+#botones_mov {
+    margin-top: 45px;
+}
+
+    #botones_mov input[type="submit"] {
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        background-color: white;
+        color: #606468;
+        font-weight: bold;
+        margin-bottom: 2em;
+        text-transform: uppercase;
+        height: 40px;
+        width: 120px;
+    }
+
+@media screen and (min-device-width: 1025px) {
+    .content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-device-width: 560px) {
+    nav {
+        zoom: 2 !important;
+    }
+
+    #submenu {
+        zoom: 1.5 !important;
+    }
+
+    #paciente {
+        zoom: 1.8 !important;
+    }
+
+    #botones_mov {
+        zoom: 2 !important;
+    }
+
+    #Lentes_ {
+        zoom: 1.8 !important;
+    }
+
+    #tableProdPedido {
+        zoom: 1.6 !important;
+    }
+
+    #tabla_prodductos {
+        zoom: 1.7 !important;
+    }
+
+    #footer {
+        zoom: 1.4 !important;
+    }
+
+    #detalles_1, #detalles_2 {
+        zoom: 1.7 !important;
+    }
+}
+/*MV: dteLente css*/
+
+#paciente {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+    #paciente span {
+        color: #333;
+        font-size: 15px;
+        padding: 30px 0 10px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    #paciente input[type="text"] {
+        color: #333;
+        font-weight: 700;
+        font-size: 15px;
+        margin: 0;
+        border: 1px solid #a9a9a9;
+        height: 27px;
+        text-align: center;
+    }
+
+#frformula {
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+
+/*/*/
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+#tbformula {
+    border: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+    #tbformula caption {
+        font-size: 1em;
+        margin: .5em 0 .75em;
+        border: 2px solid #ddd;
+        border-radius: 7px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        background-color: #e6e6e69e;
+    }
+
+    #tbformula tr {
+        background: #f8f8f8;
+        /*border: 1px solid #ddd;*/
+        padding: .35em;
+    }
+
+    #tbformula th,
+    tbformula td {
+        padding: .625em;
+        text-align: center;
+    }
+
+    #tbformula th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    #tbformula input[type="text"] {
+        width: 100px;
+        text-align: center;
+    }
+
+@media screen and (max-device-width: 600px) {
+    #tbformula {
+        border: 1px solid #ccc;
+        border: 0;
+        zoom: 1.7 !important;
+    }
+
+        #tbformula input[type="text"] {
+            width: 50%;
+            border: 0.5px solid #ddd;
+            height: 22px;
+        }
+
+        #tbformula caption {
+            font-size: 1.3em;
+        }
+
+        #tbformula thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        #tbformula tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+        }
+
+        #tbformula td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+        }
+
+            #tbformula td:before {
+                /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            #tbformula td:last-child {
+                border-bottom: 0;
+            }
+}
+
+/*MV: Arreglo de vista de submenú*/
+#submenu {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    #submenu ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        list-style: none;
+    }
+
+    #submenu li {
+        float: left;
+        margin: 0 10px;
+    }
+
+    #submenu a {
+        background: #ddd;
+        padding: .7em 1em;
+        float: left;
+        text-decoration: none;
+        color: #444;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        position: relative;
+    }
+
+    #submenu li:first-child a {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    #submenu li:last-child a {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    #submenu a:hover {
+        background: white;
+    }
+
+    #submenu li:not(:first-child) > a::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        border-width: 1.5em 0 1.5em 1em;
+        border-style: solid;
+        border-color: #ddd #ddd #ddd transparent;
+        left: -1em;
+    }
+
+    #submenu li:not(:first-child) > a:hover::before {
+        border-color: white white white transparent;
+    }
+
+    #submenu li:not(:last-child) > a::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;
+        border-left: 1em solid #ddd;
+        right: -1em;
+    }
+
+    #submenu li:not(:last-child) > a:hover::after {
+        border-left-color: white;
+    }
+
+
+/*MV: dteProducto*/
+#Cantidad {
+    text-align: center;
+    text-align: -webkit-center;
+    margin-top: -15px;
+}
+
+    #Cantidad table td {
+        border: none !important;
+    }
+
+#tabla_prodductos {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+#sub_titulos {
+    font-size: 1em;
+    margin: .5em 0 .75em;
+    border: 2px solid #ddd;
+    border-radius: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+    background-color: #b7c0c387;
+}
+
+#indicacion {
+    color: #6f6f6f;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+
+#productos table {
+    text-transform: uppercase;
+}
+
+    #productos table tr {
+        vertical-align: super;
+    }
+
+    #productos table select {
+        height: 30px;
+        width: auto;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+
+    #productos table input[type="submit"] {
+        background-color: white;
+        color: #3c7fb9;
+        border: 1px solid #726c6c;
+        vertical-align: text-bottom;
+    }
+
+    #productos table span {
+        margin-top: 1px;
+    }
+
+    #productos table td:not(:last-child) {
+        border-right: 1px solid #ddd;
+    }
+
+/*#productos table td:last-child {
+            border-right: 1px solid #ddd;
+        }*/
+
+#tabla_prodductos {
+    margin-top: 35px;
+}
+
+    #tabla_prodductos table tr {
+        vertical-align: middle;
+    }
+
+@media screen and (max-device-width: 600px) {
+    #sub_titulos {
+        font-size: 1.3em;
+    }
+}
+
+#precio_x_producto{
+    text-align: center;
+}
+
+#cant_prod{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cantidad_{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*MV: dteAro*/
+#detalles_1 table td, #detalles_1 table th, #detalles_2 table td, #detalles_2 table th {
+    width: 25% !important;
+}
+
+#detalles_1 table tr:nth-child(odd), #detalles_2 table tr:nth-child(odd) {
+    background-color: #e6e7e794;
+}
+
+#detalles_1 table tr:nth-child(even), #detalles_2 table tr:nth-child(even) {
+    background-color: white;
+}
+
+@media screen and (max-device-width: 600px) {
+    #detalles_1 table tr:nth-child(odd), #detalles_2 table tr:nth-child(odd) {
+        background-color: white;
+    }
+
+    #detalles_1 table td, #detalles_1 table th, #detalles_2 table td, #detalles_2 table th {
+        display: block;
+        width: 100% !important;
+    }
+
+    #detalles_1 table th, #detalles_2 table th {
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    #detalles_1 table td, #detalles_2 table td {
+        width: 100%;
+        height: auto;
+    }
+
+        #detalles_1 table td input, #detalles_2 table td input {
+            width: 100%;
+            height: 35px;
+            border: 1px solid #ddd;
+        }
+}
+
+
+/*Footer*/
+#footer {
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    height: auto !important;
+    text-align: center;
+    position: inherit;
+    background-color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer img {
+    width: 100%;
+}
+
+
+/*MV: dteBoleta*/
+.sub_boleta {
+    font-size: 1em;
+    margin: .5em 0 .75em;
+    border: 2px solid #c7bec7;
+    border-radius: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#formula_rx {
+    border: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+    #formula_rx caption {
+        font-size: 1em;
+        margin: .5em 0 .75em;
+        border: 2px solid #ddd;
+        border-radius: 7px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    #formula_rx tr {
+        background: #f8f8f8;
+        /*border: 1px solid #ddd;*/
+        padding: .35em;
+    }
+
+    #formula_rx th,
+    #formula_rx td {
+        padding: .625em;
+        text-align: center;
+    }
+
+    #formula_rx th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+    #formula_rx input[type="text"] {
+        width: 100px;
+    }
+
+@media screen and (max-device-width: 600px) {
+    #formula_rx {
+        border: 1px solid #ccc;
+        border: 0;
+        zoom: 1.7 !important;
+    }
+
+        #formula_rx input[type="text"] {
+            width: 50%;
+            border: 0.5px solid #ddd;
+            height: 22px;
+        }
+
+        #formula_rx caption {
+            font-size: 1.3em;
+        }
+
+        #formula_rx thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        #formula_rx tr {
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: .625em;
+        }
+
+        #formula_rx td {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+        }
+
+            #formula_rx td:before {
+                /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            #formula_rx td:last-child {
+                border-bottom: 0;
+            }
+}
+
+
+#productos_tbl{
+    width: 100%;
+}
+    #productos_tbl td, #productos_tbl th{
+        width: 25% !important;
+    }
+
+#aros_detalles{
+    width: 100%;
+}
+    #aros_detalles td, #aros_detalles th{
+        width: 25% !important;
+    }
+
+#Aros_sobre{
+    width: 100%;
+}
+    #Aros_sobre td, #Aros_sobre th{
+        width: 25% !important;
+    }
+
+/*Arreglos Búsqueda*/
+#GridView1_filter{
+    width: 100%;
+    text-align: center;
+}
+
+#GridView1_filter label input{
+    width: 60%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    background-color:  #ffffff;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 15px 14px 40px;
+    border: 1px solid #b6c3cd;
+    /*border-right: 0;*/
+    color:#4E565C;
+    outline: none;
+    -webkit-appearance: none;
+    margin-bottom: 25px;
+}
+
+@media only screen and (min-device-width: 768px) {
+    #body_Image1 {
+        width: 70%;
+    }
+}
+@media only screen and (max-device-width: 768px) {
+    #body_Image1 {
+        width: 100%;
+    }
+}
+
+table#GridView1{
+
+}
+
+table#GridView1 th, table#GridView1 td{
+    border: 1px solid #b6c3cd;
+}

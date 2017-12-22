@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Mast_pages1.Master" AutoEventWireup="true" CodeBehind="NestedMasterPage2.master.cs" Inherits="PW_PROTAL_WEB.NestedMasterPage2" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            
+</asp:Content>

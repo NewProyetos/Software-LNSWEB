@@ -1,0 +1,277 @@
+﻿#divDigitacion, #divBodega, #divTerminados, #divBisel {
+    display: none;
+}
+/*------------------------------------*\
+      ANNOTATIONS
+    \*------------------------------------*/
+/*
+    Apply a class of annotated to any figure you would like, well, annotated!
+    */
+.annotated {
+    position: relative;
+    /*display:inline-block; If you do not need to support IE7 and below uncomment this line and remove the inline width and height styles on the <figure> in your markup. */
+    width: 100%;
+}
+
+    .annotated img { /* Set this to stop white-space appearing under the image. */
+        display: block;
+        width: 100%;
+    }
+
+    .annotated b { /* Hide the figcaption’s title. */
+        position: absolute;
+        left: -99999px;
+    }
+
+    .annotated ul { /* Set up the canvas for the annotations to sit on. */
+        list-style: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .annotated li {
+        display: block;
+        padding: 0 5px;
+        /* Give them a width and a line-height suitable for your kind of images. I chose 50px. */
+        width: 40px; /* 40px + 5px padding-right  + 5px padding-left = 50px */
+        line-height: 40px;
+        position: absolute;
+        text-indent: -99999px; /* Hide the text off-screen. */
+        white-space: nowrap; /* Stop the annotations breaking onto several lines. */
+        cursor: default;
+    }
+
+    .annotated:hover li { /* When we hover the figure show us where the annotations are. */
+        border: 1px solid #fff;
+    }
+
+    .annotated li:hover { /* Show the text on hover. */
+        background: #fff;
+        background: rgba(255,255,255,0.75);
+        z-index: 2; /* Bring current annotation above others. */
+        /* Remove the width and text-indent to show us our text! */
+        width: auto;
+        text-indent: 0;
+        /* A bit o’ progressive enhancement */
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    }
+
+/*EL MODAL CON INFORMACION*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+/* Modal Content */
+/*.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}*/
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #606468;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #606468;
+    color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Estilo header modal*/
+.MH {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 300;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    text-align: left;
+}
+
+/*.modal-body p {
+    font-size: 1.8em !important;
+    float: left;
+    clear: both;
+}*/
+
+@media only screen and (min-device-width: 992px) {
+    .modal-content {
+        position: fixed;
+        /* bottom: 0; */
+        background-color: #fefefe;
+        width: 60%;
+        /*-webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;*/
+        top: 35%;
+        left: 20%;
+    }
+
+    .modal-body img {
+        float: left;
+        display: block;
+        height: 25vh;
+        width: auto;
+        border-radius: 7px;
+        max-width: 100%;
+        margin: 12px 0px;
+    }
+
+    .modal-body p {
+        font-size: 1.8em !important;
+        text-align: -webkit-center;
+        margin-top: 5px;
+        /* padding-left: 65px; */
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-device-width: 992px) and (min-device-width: 765px) {
+    .modal-content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+    }
+
+    .modal-body img {
+        float: none;
+        display: block;
+        height: 25vh;
+        width: auto;
+        border-radius: 7px;
+        max-width: 100%;
+        margin: 12px auto;
+    }
+
+    .modal-body p {
+        font-size: 1.8em !important;
+        text-align: center !important;
+        float: none;
+    }
+}
+
+@media only screen and (max-device-width: 764px) {
+    .modal-content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fefefe;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+    }
+
+    .modal-body img {
+        float: none;
+        display: block;
+        height: 15vh;
+        width: auto;
+        border-radius: 7px;
+        max-width: 100%;
+        margin: 12px auto;
+    }
+
+    .modal-body p {
+        font-size: 1.8em !important;
+        text-align: center !important;
+        float: none;
+    }
+}

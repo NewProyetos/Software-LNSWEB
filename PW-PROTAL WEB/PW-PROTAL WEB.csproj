@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A70662C-788A-4E3A-A2D2-B341F436A693}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PW_PROTAL_WEB</RootNamespace>
+    <AssemblyName>PW-PROTAL WEB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bsBusquedaFrm.aspx" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\StyleSheetLogin.css" />
+    <Content Include="css\StyleSheetMap.css" />
+    <Content Include="css\StyleSheetMenu.css" />
+    <Content Include="css\StyleSheetMenuBotones.css" />
+    <Content Include="css\StyleSheetSearch.css" />
+    <Content Include="css\StyleSheetTable.css" />
+    <Content Include="img\Bisel.jpg" />
+    <Content Include="img\Bodega.jpg" />
+    <Content Include="img\Control.jpg" />
+    <Content Include="img\Digitacion.jpg" />
+    <Content Include="img\Facturacion.jpg" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\FONDO-LESA1.png" />
+    <Content Include="img\IsoLogo-Lesa.png" />
+    <Content Include="img\IsoLogoLesa-blanco.png" />
+    <Content Include="img\LogoBlanco.png" />
+    <Content Include="img\LogoLEsa.png" />
+    <Content Include="img\Mapa_Lesa_Web.png" />
+    <Content Include="img\MOVIL-MAPA.png" />
+    <Content Include="img\Recubrimiento6.jpg" />
+    <Content Include="img\Tallado.jpg" />
+    <Content Include="img\Terminado.jpg" />
+    <Content Include="img\WEB-LESAABAJO.png" />
+    <Content Include="img\WEB-LESAOK.png" />
+    <Content Include="img\WEB-LESASAC.png" />
+    <Content Include="index.aspx" />
+    <Content Include="Jquery\jquery-1.12.4.js" />
+    <Content Include="Jquery\jquery.dataTables.min.css" />
+    <Content Include="Jquery\jquery.dataTables.min.js" />
+    <Content Include="pages\bsBusqueda.aspx" />
+    <Content Include="pages\Busqueda.aspx" />
+    <Content Include="pages\Consulta.aspx" />
+    <Content Include="paginas\dteBoleta.aspx" />
+    <Content Include="paginas\dteBoleta_nofunciona.aspx" />
+    <Content Include="paginas\dteAro.aspx" />
+    <Content Include="paginas\dteLente.aspx" />
+    <Content Include="paginas\dteProductos.aspx" />
+    <Content Include="bienvenido.aspx" />
+    <Content Include="scripts\jquery-1.4.1.min.js" />
+    <Content Include="scripts\jquery.autocomplete.js" />
+    <Content Include="Validacion_formula\validacion_formulas.js" />
+    <Content Include="scss\style.scss" />
+    <Content Include="pages\NestedMasterPage2.master" />
+    <Content Include="paginas\NestedMasterPage2.master" />
+    <None Include="Service References\LESA_services\Lservices.disco" />
+    <None Include="Service References\LESA_services\configuration91.svcinfo" />
+    <None Include="Service References\LESA_services\configuration.svcinfo" />
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.busqueda_tratamiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.combo_aro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.combo_marca_aro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.laboratorio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.listado_pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.login.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.confir_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.listado_servicios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.confir_servicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.confir_aros.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.listado_Aros.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.color_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.diseños_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.familia_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.grupos_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.materiales_lentes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.precio_producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.datos_cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\LESA_services\PW_PROTAL_WEB.LESA_services.login_PW.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\LESA_services\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bsBusquedaFrm.aspx.cs">
+      <DependentUpon>bsBusquedaFrm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bsBusquedaFrm.aspx.designer.cs">
+      <DependentUpon>bsBusquedaFrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\bsBusqueda.aspx.cs">
+      <DependentUpon>bsBusqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\bsBusqueda.aspx.designer.cs">
+      <DependentUpon>bsBusqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Busqueda.aspx.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Busqueda.aspx.designer.cs">
+      <DependentUpon>Busqueda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Consulta.aspx.cs">
+      <DependentUpon>Consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Consulta.aspx.designer.cs">
+      <DependentUpon>Consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\NestedMasterPage2.master.cs">
+      <DependentUpon>NestedMasterPage2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\NestedMasterPage2.master.designer.cs">
+      <DependentUpon>NestedMasterPage2.master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\dteBoleta.aspx.cs">
+      <DependentUpon>dteBoleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\dteBoleta.aspx.designer.cs">
+      <DependentUpon>dteBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\dteBoleta_nofunciona.aspx.cs">
+      <DependentUpon>dteBoleta_nofunciona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\dteBoleta_nofunciona.aspx.designer.cs">
+      <DependentUpon>dteBoleta_nofunciona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\dteAro.aspx.cs">
+      <DependentUpon>dteAro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\dteAro.aspx.designer.cs">
+      <DependentUpon>dteAro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\dteLente.aspx.cs">
+      <DependentUpon>dteLente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\dteLente.aspx.designer.cs">
+      <DependentUpon>dteLente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\dteProductos.aspx.cs">
+      <DependentUpon>dteProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\dteProductos.aspx.designer.cs">
+      <DependentUpon>dteProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mast_pages1.Master.cs">
+      <DependentUpon>Mast_pages1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mast_pages1.Master.designer.cs">
+      <DependentUpon>Mast_pages1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="bienvenido.aspx.cs">
+      <DependentUpon>bienvenido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bienvenido.aspx.designer.cs">
+      <DependentUpon>bienvenido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\NestedMasterPage1.master.cs">
+      <DependentUpon>NestedMasterPage1.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\NestedMasterPage1.master.designer.cs">
+      <DependentUpon>NestedMasterPage1.master</DependentUpon>
+    </Compile>
+    <Compile Include="paginas\NestedMasterPage2.master.cs">
+      <DependentUpon>NestedMasterPage2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginas\NestedMasterPage2.master.designer.cs">
+      <DependentUpon>NestedMasterPage2.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LESA_services\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mast_pages1.Master" />
+    <Content Include="paginas\NestedMasterPage1.master" />
+    <None Include="Service References\LESA_services\Lservices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LESA_services\Lservices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LESA_services\Lservices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LESA_services\Service1.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services Reference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LESA_services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17495/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

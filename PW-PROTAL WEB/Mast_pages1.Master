@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mast_pages1.master.cs" Inherits="PW_PROTAL_WEB.Mast_pages1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">Lesa Web</asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!--MV: Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--MV: Estilo-->
+    <link rel="stylesheet" href="~/css/StyleSheetMenu.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="~/css/StyleSheetMenuBotones.css" media="screen" type="text/css" />
+    <link rel="icon" href="~/img/favicon.png" type="image/png" sizes="128x128" />
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!--Aqui comienza el menú--> 
+        <div id="menu">
+            <!--MV: Inserción de contenido para visualización desktop y mobile del menú-->
+            <nav>
+                <asp:Image ID="imgLogo" runat="server" ImageUrl="~/img/IsoLogo-Lesa.png" Width="160px" />
+                <input type="checkbox" id="nav" class="hidden" />
+                <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+                <div class="nav-container">
+                    <asp:Image ID="imgLogoWhite" runat="server" ImageUrl="~/img/IsoLogoLesa-blanco.png" Width="160px" />
+                    <ul>
+                        <li><asp:Button ID="Button1" runat="server" Text="Inicio" PostBackUrl="~/bienvenido.aspx" /></li>
+                        <li><asp:Button ID="Button2" runat="server" Text="Nuevo Pedido" PostBackUrl="~/paginas/dteLente.aspx" /></li>
+                        <li><asp:Button ID="Button3" runat="server" Text="Busqueda" PostBackUrl="~/bsBusquedaFrm.aspx" /></li>
+                        <li><asp:Button ID="Button4" runat="server" Text="Cerrar Sesion" PostBackUrl="~/index.aspx" /></li>
+                        <br />
+                        <li class="contact"><a href="tel:22017788">Teléfono: (+503) 2201-7788</a></li>
+                        <li class="contact"><a href="mailto:sac@lesa.bz">Correo: sac@lesa.bz</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+
+
+        <table style="width: 100%;">
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td width="40px"></td>
+                <td class="auto-style1">
+                    <div class="content">
+
+                        <asp:ContentPlaceHolder ID="body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+                <td width="40px"></td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+        </table>
+
+
+
+    </form>
+    <footer id="footer">
+        <br />
+        Distribución a Centroamérica y el Caribe / Llámanos: <a href="tel:22017788">(+503) 2201-7788</a> o escríbenos: <a href="mailto:sac@lesa.bz">sac@lesa.bz</a>
+        <br />
+        <br />
+        <asp:Image ID="Image2" runat="server" ImageUrl="~/img/WEB-LESAABAJO.png" Width="100%" />
+    </footer>
+</body>
+</html>
