@@ -1,1 +1,3 @@
 # Software-LNSWEB
+
+Portal web para los clientes de LESA, busqueda de ordenes e ingreso de nuevos pedidos...
